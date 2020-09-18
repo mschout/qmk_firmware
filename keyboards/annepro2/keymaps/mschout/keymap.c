@@ -6,6 +6,8 @@
 // Max time allowed for second keypress to register double-tap
 #define TAPPING_TERM 200
 
+#define ________ KC_TRNS
+
 enum anne_pro_layers {
   _BASE_LAYER,
   _FN1_LAYER,
@@ -92,11 +94,11 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   *
   */
  [_FN1_LAYER] = KEYMAP( /* Base */
-    KC_GRV , KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , KC_F6         , KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 , KC_F12 , KC_DEL ,
-    KC_TRNS, KC_TRNS, KC_UP  , KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS       , KC_TRNS, KC_TRNS, KC_TRNS, KC_PSCR, KC_HOME, KC_END , KC_TRNS,
-    KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_TRNS, KC_TRNS, KC_TRNS       , KC_TRNS, KC_TRNS, KC_TRNS, KC_PGUP, KC_PGDN, KC_TRNS,
-    KC_TRNS, KC_VOLU, KC_VOLD, KC_MUTE, KC_TRNS, KC_TRNS, KC_TRNS       , KC_TRNS, KC_TRNS, KC_INS , KC_DEL , KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MO(_FN2_LAYER), KC_TRNS
+    KC_GRV  , KC_F1   , KC_F2   , KC_F3   , KC_F4   , KC_F5   , KC_F6         , KC_F7   , KC_F8   , KC_F9   , KC_F10 , KC_F11  , KC_F12  , KC_DEL  ,
+    ________, ________, KC_UP   , ________, ________, ________, ________      , ________, ________, ________, KC_PSCR, KC_HOME , KC_END  , ________,
+    ________, KC_LEFT , KC_DOWN , KC_RGHT , ________, ________, ________      , ________, ________, ________, KC_PGUP, KC_PGDN , ________,
+    ________, KC_VOLU , KC_VOLD , KC_MUTE , ________, ________, ________      , ________, ________, KC_INS  , KC_DEL , ________,
+    ________, ________, ________, ________, ________, ________, MO(_FN2_LAYER), ________
 ),
   /*
   * Layer _FN2_LAYER
@@ -114,14 +116,14 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   *
   */
  [_FN2_LAYER] = KEYMAP( /* Base */
-    KC_TRNS       , KC_AP2_BT1, KC_AP2_BT2, KC_AP2_BT3, KC_AP2_BT4, KC_TRNS       , KC_TRNS       , KC_TRNS, KC_AP_LED_OFF, KC_AP_LED_ON, KC_TRNS, KC_TRNS    , KC_TRNS  , KC_TRNS,
-    MO(_FN2_LAYER), KC_TRNS   , KC_UP     , KC_TRNS   , KC_TRNS   , KC_TRNS       , KC_TRNS       , KC_TRNS, KC_TRNS      , KC_TRNS     , KC_PSCR, KC__VOLDOWN, KC__VOLUP, KC_TRNS,
-    KC_TRNS       , KC_LEFT   , KC_DOWN   , KC_RGHT   , KC_TRNS   , KC_TRNS       , KC_TRNS       , KC_TRNS, KC_TRNS      , KC_TRNS     , KC_PGUP, KC_PGDN    , KC_TRNS  ,
-    KC_TRNS       , KC_TRNS   , KC_TRNS   , KC_TRNS   , KC_TRNS   , KC_TRNS       , KC_TRNS       , KC_TRNS, KC_TRNS      , KC_INS      , KC_DEL , KC_TRNS    ,
-    KC_TRNS       , KC_TRNS   , KC_TRNS   , KC_TRNS   , KC_TRNS   , MO(_FN1_LAYER), MO(_FN2_LAYER), KC_TRNS
+    ________      , KC_AP2_BT1, KC_AP2_BT2, KC_AP2_BT3, KC_AP2_BT4, ________      , ________      , ________, KC_AP_LED_OFF, KC_AP_LED_ON, ________, ________   , ________ , ________,
+    MO(_FN2_LAYER), ________  , KC_UP     , ________  , ________  , ________      , ________      , ________, ________     , ________    , KC_PSCR , KC__VOLDOWN, KC__VOLUP, ________,
+    ________      , KC_LEFT   , KC_DOWN   , KC_RGHT   , ________  , ________      , ________      , ________, ________     , ________    , KC_PGUP , KC_PGDN    , ________ ,
+    ________      , ________  , ________  , ________  , ________  , ________      , ________      , ________, ________     , KC_INS      , KC_DEL  , ________   ,
+    ________      , ________  , ________  , ________  , ________  , MO(_FN1_LAYER), MO(_FN2_LAYER), ________
  ),
- 
 };
+
 const uint16_t keymaps_size = sizeof(keymaps);
 
 
